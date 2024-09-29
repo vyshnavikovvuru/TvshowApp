@@ -1,0 +1,123 @@
+body{
+    background-image:url("https://images.wallpapersden.com/image/download/house-of-the-dragon-hd-season-1_bWtrbWeUmZqaraWkpJRnamtlrWZpaWU.jpg");
+    background-repeat: no repeat;
+    background-size: cover; 
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+input{
+    text-align: center;
+    margin: 0 auto;
+    height: 30px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-color: orange;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+    /* width: 200px; */
+}
+      
+input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px #3498db;
+}
+
+h1{
+    color:blanchedalmond;
+    /* height: 50px; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    border-radius: 10px;
+    border-color: orange;
+    margin-left: 10px;
+}
+h2{
+    color: yellow;
+    /* height: 50px; */
+    font-size: 50px;
+    margin-left: 10px;
+}
+h1, h2 {
+    display: inline-block; 
+    margin: 0;
+    text-align: left;
+    /* font-size: 70px; */
+}
+button{
+    text-align: center;
+    width: 8%;
+    margin: 0 auto;
+    background-color:rgb(193, 89, 55); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none; 
+    font-size: 16px;
+    margin: 2px 1px;
+    cursor: pointer;
+    /* display: flex;
+    justify-content: center; /* Centers horizontally */
+    /* align-items: center;  */
+    display: block; /* Ensures the button acts as a block element */
+            margin: 0 auto; 
+}
+
+button:hover {
+  background-color: lightblue; 
+}
+.showImage {
+    margin: 10px; /* Add space between each image */
+    display: flex;
+    flex-wrap: wrap;     /* Wrap images if they don't fit in a row */
+    gap: 10px;           /* Space between images */
+    justify-content: center;
+    max-width: 200px;    /* Limit the size of the image */
+ 
+}
+.image-container {
+    display: flex;
+    gap: 10px; /* Space between images */
+    justify-content: flex-start; /* Center the images horizontally */
+    flex-wrap: wrap; /* Ensure images stay in a single line */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    /* width: 800px; */
+    width: 2000px; /* Limit the width of images */
+    height: auto;
+    overflow-x: hidden; 
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    /* On smaller screens, make the images take up more space per row */
+    .image-container img {
+        max-width: calc(50% - 10px); /* On smaller screens, show 2 images per line */
+    }
+}
+@media (max-width: 480px) {
+    /* On very small screens, stack the images one per row */
+    .image-container img {
+        max-width: calc(100% - 10px); /* Full width images for very small screens */
+    }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+.image-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* img {
+    width: 500px; /* Limit the width of images */
+    /* height: auto;     Maintain the aspect ratio */
+/* } */ 
